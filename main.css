@@ -27,6 +27,9 @@ html{
     background-color: var(--main-bg);
     color: var(--white);
 }
+.nav{
+    max-width: auto;
+}
 h2,nav,.cta{
     font-family: "Raleway" sans-serif;
     font-weight: 700;
@@ -54,7 +57,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 73px 80px;
+    padding: 73px 100px;
     background: var(--intro-email-bg);
 }
 .nav-items{
@@ -121,8 +124,8 @@ main{
 .more-description{
     display: flex;
     align-items: center;
-    padding: 0 100px;
-    width: 1500px;
+    padding: 0 50px 0 160px;
+    
     
 }
 .img-box img{
@@ -135,7 +138,7 @@ main{
     margin-bottom: 25px;
 }
 .text-box{
-    margin-left: 35px;
+    margin-left: 45px;
 }
 .text-box p{
     width: 547px;
@@ -254,9 +257,9 @@ form{
 
 footer{
     background: var(--footer-bg);
-    padding: 200px 80px 80px 100px;
+    padding: 250px 80px 80px 100px;
     display: grid;
-    grid-template-columns: 4fr 3fr 1fr 1fr 2fr;
+    grid-template-columns: 3.5fr 2fr 1fr 1fr 1.5fr;
     grid-template-rows: auto;
     column-gap: 70px;
     grid-template-areas: 
@@ -274,6 +277,8 @@ footer{
 }
 .footer-location p{
     padding-left: 25px;
+    width: 80%;
+    padding-right: 15px;
 }
 .footer-location img{
     padding-top: 5px;
@@ -284,9 +289,6 @@ footer{
 .footer-contact p{
     margin-bottom: 25px;
 }
-.footer-contact span{
-  font-size: 17px;
-}
 .footer-contact img{
     margin-right: 24px;
     height: 13px;
@@ -295,12 +297,62 @@ footer{
     grid-area: links;
     display: grid;
     grid-template-columns: 1fr;
+    margin-bottom: 5px;
+}
+.footer-links :not(:first-child){
+    padding-top: 17px;
 }
 .footer-links a{
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 }
 .more-links{
     grid-area: more-links;
     display: grid;
     grid-template-columns: 1fr;
+}
+.socials{
+    grid-area: socials;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+}
+.socials i{
+    font-size: 30px;
+}
+
+/* responsiveness */
+
+@media(max-width:375){
+    html{
+        font-size: 10px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    .nav{
+        padding: 24px 20px;
+    }
+    .nav-items :not(:last-child){
+        padding-right: 23px;
+    }
+    .brand-logo img{
+        width: 82px;
+        height: 24px;
+    }
+    .hero img{
+        width: 302px;
+        height: 225px;
+    }
+    .hero h2{
+        width: 302px;
+        margin: 23px;
+    }
+    .hero p{
+        width: 292px;
+        font-size: 12px;
+        padding: 0px 23px;
+    }
+    .cta{
+        width: 242px;
+        padding: 18px 0;
+    }
 }
